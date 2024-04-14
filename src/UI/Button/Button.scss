@@ -1,0 +1,21 @@
+button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 200px; 
+  }
+  
+  .button__placeholder {
+    flex-grow: 1; 
+    text-align: left; 
+  }
+  
+  .button__icon {
+    margin-left: 10px; 
+  }
+  
