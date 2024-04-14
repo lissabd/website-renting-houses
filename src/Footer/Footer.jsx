@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="footer__block">
         <h6 className="footer__title">ABOUT CHAT ASSISTANT</h6>
         <p className="footer__text">
-          Utilize our chat assistant to explore available apartments or houses for rent effortlessly.
+          Utilize our chat assistant to explore available apartments or houses for rent effortlessly
         </p>
         <Button/>
       </div>
