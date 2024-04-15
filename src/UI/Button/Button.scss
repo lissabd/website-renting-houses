@@ -7,7 +7,7 @@
     cursor: pointer;
     width: 200px; 
     position: relative;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Добавляем тень */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
   }
   
   .button__placeholder {
@@ -18,6 +18,6 @@
   .button__icon svg{
     position: absolute;
     right: 15px;
-    top: 5px;
+    top: 8px;
   }
   
