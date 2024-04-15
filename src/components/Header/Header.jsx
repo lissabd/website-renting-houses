@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
 
 
 const Header = () => {
@@ -14,11 +14,10 @@ const Header = () => {
       </div> 
       <div className="header__right">
         <Link to="/" className="header__link">Home</Link>
-        <Link to="/about" className="header__link">Assistant</Link>
-        <Link to="/about" className="header__link">About Us</Link>
+        <Link to="/about-us" className="header__link">Assistant</Link>
+        <Link to="/assistant" className="header__link">About Us</Link>
       </div>
     </div>
-    
     </>
   );
 }
