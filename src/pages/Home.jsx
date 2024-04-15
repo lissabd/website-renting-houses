@@ -4,11 +4,21 @@ import icon1 from "../images/iconList1.png";
 import icon2 from "../images/iconList2.png";
 import icon3 from "../images/iconList3.png";
 import phone from "../images/phone.png";
+import town from "../images/town.png";
 import "./Home.scss";
+import Button from "../UI/Button/Button";
 
 const Home = () => {
   return (
     <div className="home__container">
+      <div className="about_bot__container">
+        <div className="text__containerr">
+          <h2>Inclusive. Save. Helpful.</h2>
+          <p>...It's all about our Chat Assistant</p>
+          <Button/>
+        </div>
+        <img src={town} alt="Town" className="town__image" />
+      </div>
       <div className="list__container">
         <div className="text__container">
           <h5>So, What’s Chat Assistant?</h5>
