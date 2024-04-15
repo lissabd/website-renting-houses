@@ -14,8 +14,8 @@ const Header = () => {
       </div> 
       <div className="header__right">
         <Link to="/" className="header__link">Home</Link>
-        <Link to="/about-us" className="header__link">Assistant</Link>
-        <Link to="/assistant" className="header__link">About Us</Link>
+        <Link to="/assistant" className="header__link">Assistant</Link>
+        <Link to="/about-us" className="header__link">About Us</Link>
       </div>
     </div>
     </>
