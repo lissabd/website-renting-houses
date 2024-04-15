@@ -26,7 +26,7 @@
 }
 
 h1,
-h2 {
+.about_us__container h2 {
   font-weight: 450;
   font-size: 1em;
   position: relative;
@@ -39,8 +39,8 @@ h1, h2 {
   margin-top: 60px;
 }
 
-h1::after,
-h2::after {
+.about_us__container h1::after,
+.about_us__container h2::after {
   content: "";
   position: absolute;
   left: 46%;
