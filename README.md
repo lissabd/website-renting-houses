@@ -11,14 +11,14 @@
 - [Команда проекта](#команда-проекта)
 
 ## Технологии
-- 'Python v3.12'
-- 'Flask Framework v3.0.3'
-- 'JavaScript v1.8.5'
-- 'React v18.0'
-- 'Redux Toolkit v2.2.3'
-- 'SCSS 1.77.0'
-- 'MySQL Database v8.4.0'
-- 'Docker'
+- `Python v3.12`
+- `Flask Framework v3.0.3`
+- `JavaScript v1.8.5`
+- `React v18.0`
+- `Redux Toolkit v2.2.3`
+- `SCSS 1.77.0`
+- `MySQL Database v8.4.0`
+- `Docker`
 - ...
 
 ## Функционал
@@ -33,7 +33,7 @@
 Необходимо освободить порты 8000, 5000 и 3303.
 
 ## Использование
-Для начала необходимо склонировать данный репозиторий на локальную машину командой `git clone [website-renting-houses](https://github.com/lissabd/website-renting-houses.git)`.
+Для начала необходимо склонировать данный репозиторий на локальную машину командой `git clone https://github.com/lissabd/website-renting-houses.git`.
 Затем перейти в корневую директорию проекта и ввести команду `docker-compose up --build`.
 Серверная часть запустится по адресу http://localhost:8000
 Само приложение будет доступно по адресу http://localhost:5000
