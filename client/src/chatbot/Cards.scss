@@ -31,6 +31,7 @@
 .apartment-card .slideshow {
   max-width: 100%;
   overflow: hidden;
+  height: 350px;
 }
 
 /*ДЛЯ САМИХ КАРТ*/
@@ -80,9 +81,7 @@
 
 .apartment-card .slide {
   display: inline-block;
-  height: 230px;
   width: 100%;
-  border-radius: 40px;
 }
 
 .apartment-card .slideshowDots {
