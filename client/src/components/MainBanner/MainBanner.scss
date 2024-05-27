@@ -15,7 +15,7 @@
   position: relative;
 }
 
-.slideshowSlider {
+ .slideshowSlider {
   display: flex;
   height: 100%;
   transition: ease 1000ms;
@@ -32,6 +32,9 @@
   justify-content: flex-start; 
   color: white;
   overflow: hidden; 
+}
+
+.main-banner .slide {
   padding-left: 50px; 
 }
 
