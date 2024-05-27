@@ -52,9 +52,46 @@ const ChatWindow = () => {
     setIsHovered(false);
   };
 
+
+   
+  const [apartments, setApartments] = useState({});
+
+  useEffect(() => {
+    if (city && metro && numberOfRooms && priceMin && priceMax) {
+      const fetchDataFromBackend = async () => {
+        try {
+          const userData = {
+            num_rooms: numberOfRooms,  // количество комнат
+            metro: metro, // станция метро
+            priceMin: priceMin,  // минимальная цена
+            priceMax: priceMax  // максимальная цена
+          };
+          const response = await axios.post('http://localhost:8000/process_data', userData);
+          const apartments = response.data;
+          setApartments(apartments);
+        } catch (error) {
+          console.error('Ошибка при получении данных с бэкенда:', error);
+        }
+      };
+
+      fetchDataFromBackend();
+    }
+  }, [city, metro, numberOfRooms, priceMin, priceMax]);
+
+  useEffect(() => {
+    if (Object.keys(apartments).length > 0) {
+      dispatch(receiveMessage(<ApartmentSlider apartments={apartments} />));
+      setTimeout(() => {
+        dispatch(receiveMessage(starsMessage));
+      }, 2000);
+    }
+  }, [apartments, dispatch]);
+
+
+  /*
   const [apartments, setApartments] = useState([]);
 
-  /* МОКОВЫЕ ДАННЫЕ И ЗАПРОМ
+  
   
   console.log(apartments)
   useEffect(() => {
@@ -107,10 +144,10 @@ const ChatWindow = () => {
       dispatch(receiveMessage(<ApartmentSlider apartments={apartments} />));
     } 
     
-  }, [apartments, dispatch]);
-   */
-
-  useEffect(() => {
+  }, [apartments, dispatch]); */
+  
+  /**
+   *   useEffect(() => {
     const fetchDataFromBackend = async () => {
       try {
         if (city && metro && numberOfRooms && priceMin && priceMax) {
@@ -137,6 +174,9 @@ const ChatWindow = () => {
     fetchDataFromBackend();
 
   }, [city, metro, numberOfRooms, priceMin, priceMax, dispatch]); 
+   */
+
+
   
 
   const handleSaveMetroStation = () => {
