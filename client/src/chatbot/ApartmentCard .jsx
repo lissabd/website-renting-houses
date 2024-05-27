@@ -81,9 +81,6 @@ const ApartmentCard = ({ apartment, cardIndex, totalSlides }) => {
             Перейти
           </a>
         </div>
-        <div className='count-slides'>
-         <p>{cardIndex + 1}  из  {totalSlides}</p>
-        </div>
       </div>
     </div>
   );
