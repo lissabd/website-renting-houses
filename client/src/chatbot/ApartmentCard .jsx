@@ -36,8 +36,6 @@ const ApartmentCard = ({ apartment, cardIndex, totalSlides }) => {
     .map((key) => <img key={key} src={apartment[key]} alt="Apartment" />);
   const roomDescription = countOfRooms > 0 ? `${countOfRooms}-комнатная квартира` : "студия";
 
-  console.log(images);
-
   return (
     <div className="apartment-card">
       <div className="card-header">
@@ -46,8 +44,8 @@ const ApartmentCard = ({ apartment, cardIndex, totalSlides }) => {
             className="slideshowSlider"
             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
           >
-            {images.map((image, index) => (
-              <div className="slide" key={index}>
+            {images.map((image, idx) => (
+              <div className="slide" key={idx}>
                 {image}
               </div>
             ))}
