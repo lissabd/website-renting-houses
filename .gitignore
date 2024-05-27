@@ -1,0 +1,5 @@
+# Игнорировать временные файлы MySQL
+data/*.sock
+data/*.cnf
+data/*.index
+data/ib_buffer_pool
