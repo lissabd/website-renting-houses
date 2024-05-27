@@ -1,0 +1,81 @@
+@import 'normalize.css';
+
+.header {
+  background-color: rgba(0, 0, 0, 0.91);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: relative;
+  height: 80px;
+  z-index: 1;
+}
+
+.header--home {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 35px;
+  margin-top: 3px;
+  justify-content: center;
+  p {
+    font-size: 17px;
+    margin-top: -6px;
+    margin-bottom: 15px;
+  }
+}
+
+.header__logo {
+  width: 90px;
+  margin-right: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header__right {
+  display: flex;
+}
+
+.header__link {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 95px;
+  position: relative;
+}
+
+.header__link:hover::after,
+.header__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+@keyframes decreaseWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.header__link:hover::after {
+  animation: decreaseWidth 0.4s forwards;
+}

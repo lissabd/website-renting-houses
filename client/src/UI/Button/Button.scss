@@ -1,0 +1,34 @@
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    cursor: pointer;
+    width: 200px; 
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+    outline: none;
+  }
+  
+  .button__placeholder {
+    flex-grow: 1; 
+    text-align: left; 
+  }
+  
+  .button__icon svg{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+  }
+
+  .link {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .link:hover {
+    text-decoration: none;
+  }
+  
+  

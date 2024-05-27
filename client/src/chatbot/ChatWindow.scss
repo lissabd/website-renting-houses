@@ -1,0 +1,483 @@
+.chat-window {
+  border-radius: 15px;
+  width: 800px;
+  height: 520px;
+  max-width: 1000px;
+  max-height: 800px;
+  margin-top: 30px;
+  position: relative;
+  background-color: rgba(20, 19, 19, 0.5);
+  backdrop-filter: blur(5px);
+
+  @media screen and (min-width: 1500px) {
+    width: 850px;
+  }
+}
+
+.error-message {
+  width: 200px;
+}
+
+.header-chat {
+  background-color: rgb(21, 21, 21, 0.91);
+  color: rgb(212, 212, 212);
+  padding: 0 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  text-align: center;
+
+  .header-title {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 5px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+
+    .chat-icon {
+      font-size: 24px;
+    }
+  }
+}
+
+
+.header-chat .status-icons {
+  display: flex;
+}
+
+.header-chat .status-icons .status-icon {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+
+.header-chat .status-icons .status-icon.green {
+  background-color: rgb(98, 216, 98);
+}
+
+.header-chat .status-icons .status-icon.yellow {
+  background-color: rgb(249, 227, 63);
+}
+
+.header-chat .status-icons .status-icon.red {
+  background-color: rgb(232, 77, 97);
+  cursor: pointer;
+}
+
+.messages {
+  max-height: 395px;
+  overflow-y: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.tooltip {
+  z-index: 1000;
+}
+
+.messages::-webkit-scrollbar {
+  width: 12px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: rgb(55, 55, 55);
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: rgb(132, 131, 131);
+}
+
+.no-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  span {
+    font-weight: 400;
+    margin-bottom: 3px;
+  }
+}
+
+.no-mes-span {
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: auto;
+  min-width: 50px;
+  background-color: #9d8f8f50;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+.message.user {
+  margin-left: auto;
+  text-align: right;
+  margin-right: 30px;
+  max-width: min-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .message-content {
+    width: max-content;
+  }
+}
+
+.message.user:first-of-type {
+  margin-top: 0;
+}
+
+.message.bot {
+  margin-right: auto;
+  text-align: left;
+  margin-left: 40px;
+  max-width: min-content;
+}
+
+.roomsMessage {
+  width: 350px;
+}
+
+.welcomeMessage {
+  width: 375px;
+}
+
+.price-message {
+  width: 375px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+}
+
+.message.user .avatar {
+  right: -45px;
+  margin-left: 5px;
+}
+
+.message.bot .avatar {
+  left: -40px;
+  bottom: 0;
+}
+
+.message-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 15px;
+}
+
+.message-buttons button {
+  background-color: rgba(21, 21, 21, 0.338);
+  border: none;
+  border-radius: 20px;
+  padding: 7px 20px;
+  display: flex;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  width: 180px;
+  position: relative;
+  text-align: start;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 35px;
+}
+
+.price-sp {
+  font-size: 14px;
+}
+
+.message-buttons button span {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-buttons button:nth-child(1) span::before {
+  content: "1";
+}
+
+.message-buttons button:nth-child(2) span::before {
+  content: "2";
+}
+
+.message-buttons button:nth-child(3) span::before {
+  content: "3";
+}
+
+.message-buttons button:nth-child(4) span::before {
+  content: "4";
+}
+
+select {
+  margin-top: 15px;
+  background-color: #333;
+  color: white;
+  padding: 8px 55px;
+  padding-left: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+
+.text-rooms {
+  margin-bottom: 20px;
+}
+
+option {
+  background-color: #333;
+  color: white;
+}
+
+.metro-OK,
+.ok-price-button {
+  padding: 7px;
+  background-color: #333;
+  color: white;
+  margin-left: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.input-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: rgb(21, 21, 21, 0.71);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-right {
+  position: absolute;
+  right: 23px;
+  bottom: 11px;
+
+}
+
+.input-container input[type="text"] {
+  padding: 13px 5px;
+  border-radius: 5px;
+  background-color: rgba(90, 85, 85, 0.52);
+  color: white;
+  width: 520px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 20px !important;
+
+}
+
+input[type="text"]::placeholder {
+  color: white;
+
+  font-weight: 400;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.how-to {
+  cursor: pointer;
+}
+
+.input-container button {
+  padding: 15px 18px;
+  border: none;
+
+  background-color: rgba(207, 207, 207, 0.3);
+  color: white;
+  border-radius: 7px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.price-message input {
+  outline: none;
+  width: 100px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 30px;
+  margin-top: 5px;
+  padding-left: 5px;
+  text-align: start;
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  border-radius: 7px;
+  background-color: #d9d9d9;
+}
+
+.input_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_block.start {
+  margin-right: 50px;
+}
+
+.price-ranges-cont {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  input {
+    width: 140px;
+  }
+}
+
+.startk {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow-image {
+  position: absolute;
+  left: 158px;
+  top: 30px;
+  width: 50px;
+}
+
+.ok-price-button {
+  position: absolute;
+  right: 18px;
+  bottom: 9px;
+}
+
+.price-message {
+  padding: 7px;
+  padding-bottom: 40px;
+}
+
+option {
+  font-size: 16px;
+}
+
+.metro__message {
+  padding: 3px;
+  width: 300px;
+  position: relative;
+
+  .metro-OK {
+    position: absolute;
+    right: -3px;
+    bottom: 4px;
+  }
+}
+
+.input_block span {
+  font-size: 14px;
+}
+
+.input-left {
+  position: absolute;
+  left: 23px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.input-left .how-to {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.input-left span {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(23, 23, 23, 0.9);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  height: min-content;
+  left: 0;
+  font-weight: 400;
+  bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  span:first-of-type {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+select::-webkit-scrollbar {
+  width: 12px;
+}
+
+select::-webkit-scrollbar-track {
+  background: rgb(55, 55, 55);
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: rgb(132, 131, 131);
+}

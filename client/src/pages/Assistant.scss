@@ -1,0 +1,10 @@
+@import 'normalize.css';
+
+.assistant-container {
+    background-image: url('../images/backgroundChat.png'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+}
