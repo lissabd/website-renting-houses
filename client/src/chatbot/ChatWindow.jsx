@@ -81,9 +81,6 @@ const ChatWindow = () => {
   useEffect(() => {
     if (Object.keys(apartments).length > 0) {
       dispatch(receiveMessage(<ApartmentSlider apartments={apartments} />));
-      setTimeout(() => {
-        dispatch(receiveMessage(starsMessage));
-      }, 2000);
     }
   }, [apartments, dispatch]);
 
