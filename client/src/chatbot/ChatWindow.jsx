@@ -27,23 +27,7 @@ const ChatWindow = () => {
   const priceMax = useSelector((state) => state.userAnswer.maxValueAns);
   const [isHovered, setIsHovered] = useState(false);
 
-    /* ПОД ВОПРОСОМ */
-    useEffect(() => {
-      scrollToMiddle();
-    }, []);
   
-    const scrollToMiddle = () => {
-      const chatHeight = messagesEndRef.current?.offsetTop || 0;
-      const middleHeight = chatHeight / 3.2;
-      window.scrollTo({ 
-        top: middleHeight,
-         behavior: 'smooth' 
-        }
-      );
-    };
-    /* --------------- */
- 
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
