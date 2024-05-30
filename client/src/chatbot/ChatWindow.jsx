@@ -272,7 +272,7 @@ const ChatWindow = () => {
             <option value="Воробьевы горы">Воробьевы горы</option> 
             <option value="Университет">Университет</option>
             <option value="Проспект Вернадского">Проспект Вернадского</option>
-            <option value="Юго-Западаная">Юго-Западная</option>
+            <option value="Юго-Западная">Юго-Западная</option>
             <option value="Тропарево">Тропарево</option>
             <option value="Румянцево">Румянцево</option>
             <option value="Саларьево">Саларьево</option>
